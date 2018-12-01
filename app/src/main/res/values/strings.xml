@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Will you survive?</string>
+    <string name="edit_text_name">Name</string>
+    <string name="content_description">Zombie Image</string>
+    <string name="submit">Submit</string>
+    <string name="reset">Try Again</string>
+
+    <string name="realization_title">1. Realization</string>
+    <string name="realization_text">You just realized that you might actually be in the midst of a zombie apocalypse. What is your first move?</string>
+    <string name="realization_hide">Hide in your room and wait for it to blow over.</string>
+    <string name="realization_weapon">Board up your house and find a weapon.</string>
+    <string name="realization_drive">Drive away and hope you don\'t run into zombies.</string>
+    <string name="realization_denial">Do nothing because it\'s probably fake.</string>
+
+    <string name="weapons_title">2. Weapons</string>
+    <string name="weapons_text">Which weapons are the best options to choose for protection? Please choose 5 options.</string>
+    <string name="weapons_bat">Baseball bat</string>
+    <string name="weapons_gun">Gun</string>
+    <string name="weapons_crowbar">Crowbar</string>
+    <string name="weapons_knife">Knife</string>
+    <string name="weapons_karate">Karate skills</string>
+    <string name="weapons_pan">Frying pan</string>
+    <string name="weapons_katana">Katana</string>
+    <string name="weapons_club">Golf club</string>
+
+    <string name="safe_title">3. Safe</string>
+    <string name="safe_text">Where would be the best place to stay safe?</string>
+    <string name="safe_house">In a house</string>
+    <string name="safe_tent">In a tent</string>
+    <string name="safe_bunker">In a bunker</string>
+    <string name="safe_shed">In a shed</string>
+
+    <string name="vehicles_title">4. Vehicles</string>
+    <string name="vehicles_text">What are the best vehicles to drive during a zombie apocalypse? Please choose 5 options.</string>
+    <string name="vehicles_bicycle">Bicycle</string>
+    <string name="vehicles_sports">Sports car</string>
+    <string name="vehicles_motorcycle">Motorcycle</string>
+    <string name="vehicles_scooter">Scooter</string>
+    <string name="vehicles_tank">Tank</string>
+    <string name="vehicles_armored">Armored car</string>
+    <string name="vehicles_jeep">Jeep</string>
+    <string name="vehicles_monster">Monster truck</string>
+
+    <string name="trust_title">5. Trust</string>
+    <string name="trust_text">Who can you trust?</string>
+    <string name="trust_no_one">No one&#8230; -_-</string>
+    <string name="trust_everyone">Everyone! :)</string>
+
+    <string name="bitten_title">6. Bitten</string>
+    <string name="bitten_text">Someone you know has been bitten. How do you proceed with the situation?</string>
+    <string name="bitten_shoot">Shoot first, ask questions later!</string>
+    <string name="bitten_wait">Wait until they turn, then shoot.</string>
+    <string name="bitten_sad">Don\'t shoot at all. You can\'t bring yourself to do it.</string>
+    <string name="bitten_pet">Let them turn, then keep them as a pet to ward off future zombies.</string>
+
+    <string name="supplies_title">7. Supplies</string>
+    <string name="supplies_text">Which food would be the most helpful for survival? Please choose 5 options.</string>
+    <string name="supplies_jerky">Beef jerky</string>
+    <string name="supplies_seeds">Seeds</string>
+    <string name="supplies_protein">Protein bars</string>
+    <string name="supplies_rations">Army rations</string>
+    <string name="supplies_water">Water bottles</string>
+    <string name="supplies_energy">Energy drinks</string>
+    <string name="supplies_candy">Candy</string>
+    <string name="supplies_junk">Junk food</string>
+
+    <string name="death_title">8. Death To The Zombie!</string>
+    <string name="death_text">How do you kill a zombie?</string>
+    <string name="death_heart">Shot to the heart.</string>
+    <string name="death_cut">Cut the legs off.</string>
+    <string name="death_tie">Tie it up and let it starve.</string>
+    <string name="death_brain">Damage the brain.</string>
+</resources>

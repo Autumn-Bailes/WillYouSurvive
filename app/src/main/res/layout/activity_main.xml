@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="codedragon.will_you_survive.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/zombie_mouth"
+            android:contentDescription="@string/content_description" />
+
+        <EditText
+            android:id="@+id/name_for_quiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:hint="@string/edit_text_name"
+            android:inputType="textPersonName"
+            android:theme="@style/EditText" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/colorAccent" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/realization_title"
+            android:theme="@style/Header" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/realization_text"
+            android:theme="@style/Question" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:theme="@style/RadioGroup">
+
+            <RadioButton
+                android:id="@+id/realization_hide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/realization_hide"
+                android:theme="@style/RadioButton" />
+
+            <RadioButton
+                android:id="@+id/realization_weapon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/realization_weapon"
+                android:theme="@style/RadioButton" />
+
+            <RadioButton
+                android:id="@+id/realization_drive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/realization_drive"
+                android:theme="@style/RadioButton" />
+
+            <RadioButton
+                android:id="@+id/realization_denial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/realization_denial"
+                android:theme="@style/RadioButton" />
+
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/colorAccent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/weapons_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/weapons_title"
+                android:theme="@style/Header" />
+
+            <TextView
+                android:id="@+id/weapons_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weapons_title"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/weapons_text"
+                android:theme="@style/Question" />
+
+            <CheckBox
+                android:id="@+id/weapons_bat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/weapons_text"
+                android:layout_margin="4dp"
+                android:layout_marginStart="4dp"
+                android:text="@string/weapons_bat"
+                android:theme="@style/Checkbox" />
+
+            <CheckBox
+                android:id="@+id/weapons_gun"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/weapons_bat"
+                android:layout_margin="4dp"
+                android:layout_marginStart="4dp"
+                android:text="@string/weapons_gun"
+                android:theme="@style/Checkbox" />
+
+            <CheckBox
+                android:id="@+id/weapons_crowbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/weapons_gun"
+                android:layout_margin="4dp"
+                android:layout_marginStart="4dp"
+                android:text="@string/weapons_crowbar"
+                android:theme="@style/Checkbox" />
+
+            <CheckBox
+                android:id="@+id/weapons_knife"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/weapons_crowbar"
+                android:layout_margin="4dp"
+                android:layout_marginStart="4dp"
+                android:text="@string/weapons_knife"
+                android:theme="@style/Checkbox" />
+
+            <View
+                android:id="@+id/weapons_view_line"
+                android:layout_width="2dp"
+                android:layout_height="125dp"
+                android:layout_below="@id/weapons_text"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true" />
+
+            <CheckBox
+                android:id="@+id/weapons_karate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weapons_text"
+                android:layout_margin="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@id/weapons_view_line"
+                android:text="@string/weapons_karate"
+                android:theme="@style/Checkbox" />
+
+            <CheckBox
+                android:id="@+id/weapons_pan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weapons_karate"
+                android:layout_margin="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@id/weapons_view_line"
+                android:text="@string/weapons_pan"
+                android:theme="@style/Checkbox" />
+
+            <CheckBox
+                android:id="@+id/weapons_katana"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weapons_pan"
+                android:layout_margin="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@id/weapons_view_line"
+                android:text="@string/weapons_katana"
+                android:theme="@style/Checkbox" />
+
+            <CheckBox
+                android:id="@+id/weapons_club"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weapons_katana"
+                android:layout_margin="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@id/weapons_view_line"
+                android:text="@string/weapons_club"
+                android:theme="@style/Checkbox" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:background="#000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/safe_title"
+                android:theme="@style/Header" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/safe_text"
+                android:theme="@style/Question" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:theme="@style/RadioGroup">
+
+                <RadioButton
+                    android:id="@+id/safe_house"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/safe_house"
+                    android:theme="@style/RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/safe_tent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/safe_tent"
+                    android:theme="@style/RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/safe_bunker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/safe_bunker"
+                    android:theme="@style/RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/safe_shed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/safe_shed"
+                    android:theme="@style/RadioButton" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:background="#000000" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/vehicles_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/vehicles_title"
+                android:theme="@style/Header" />
+
+            <TextView
+                android:id="@+id/vehicles_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vehicles_title"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/vehicles_text"
+                android:theme="@style/Question" />
+
+            <CheckBox
+                android:id="@+id/vehicles_bicycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/vehicles_text"
+                android:layout_margin="4dp"
+                android:layout_marginStart="4dp"
+                android:text="@string/vehicles_bicycle"
+                android:theme="@style/Checkbox" />
+
+            <CheckBox
+                android:id="@+id/vehicles_sports"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/vehicles_bicycle"
+                android:layout_margin="4dp"
+                android:layout_marginStart="4dp"
+                android:text="@string/vehicles_sports"
+                android:theme="@style/Checkbox" />
+
+            <CheckBox
+                android:id="@+id/vehicles_motorcycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/vehicles_sports"
+                android:layout_margin="4dp"
+                android:layout_marginStart="4dp"
+                android:text="@string/vehicles_motorcycle"
+                android:theme="@style/Checkbox" />
+
+            <CheckBox
+                android:id="@+id/vehicles_scooter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/vehicles_motorcycle"
+                android:layout_margin="4dp"
+                android:layout_marginStart="4dp"
+                android:text="@string/vehicles_scooter"
+                android:theme="@style/Checkbox" />
+
+            <View
+                android:id="@+id/vehicles_view_line"
+                android:layout_width="2dp"
+                android:layout_height="125dp"
+                android:layout_below="@id/vehicles_text"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true" />
+
+            <CheckBox
+                android:id="@+id/vehicles_tank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vehicles_text"
+                android:layout_margin="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@id/vehicles_view_line"
+                android:text="@string/vehicles_tank"
+                android:theme="@style/Checkbox" />
+
+            <CheckBox
+                android:id="@+id/vehicles_armored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vehicles_tank"
+                android:layout_margin="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@id/vehicles_view_line"
+                android:text="@string/vehicles_armored"
+                android:theme="@style/Checkbox" />
+
+            <CheckBox
+                android:id="@+id/vehicles_jeep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vehicles_armored"
+                android:layout_margin="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@id/vehicles_view_line"
+                android:text="@string/vehicles_jeep"
+                android:theme="@style/Checkbox" />
+
+            <CheckBox
+                android:id="@+id/vehicles_monster"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vehicles_jeep"
+                android:layout_margin="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@id/vehicles_view_line"
+                android:text="@string/vehicles_monster"
+                android:theme="@style/Checkbox" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:background="#000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/trust_title"
+                android:theme="@style/Header" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/trust_text"
+                android:theme="@style/Question" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:theme="@style/RadioGroup">
+
+                <RadioButton
+                    android:id="@+id/trust_no_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/trust_no_one"
+                    android:theme="@style/RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/trust_everyone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/trust_everyone"
+                    android:theme="@style/RadioButton" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:background="#000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/bitten_title"
+                android:theme="@style/Header" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/bitten_text"
+                android:theme="@style/Question" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:theme="@style/RadioGroup">
+
+                <RadioButton
+                    android:id="@+id/bitten_shoot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/bitten_shoot"
+                    android:theme="@style/RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/bitten_wait"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/bitten_wait"
+                    android:theme="@style/RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/bitten_sad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/bitten_sad"
+                    android:theme="@style/RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/bitten_pet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/bitten_pet"
+                    android:theme="@style/RadioButton" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:background="#000000" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/supplies_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/supplies_title"
+                android:theme="@style/Header" />
+
+            <TextView
+                android:id="@+id/supplies_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/supplies_title"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/supplies_text"
+                android:theme="@style/Question" />
+
+            <CheckBox
+                android:id="@+id/supplies_jerky"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/supplies_text"
+                android:layout_margin="4dp"
+                android:layout_marginStart="4dp"
+                android:text="@string/supplies_jerky"
+                android:theme="@style/Checkbox" />
+
+            <CheckBox
+                android:id="@+id/supplies_seeds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/supplies_jerky"
+                android:layout_margin="4dp"
+                android:layout_marginStart="4dp"
+                android:text="@string/supplies_seeds"
+                android:theme="@style/Checkbox" />
+
+            <CheckBox
+                android:id="@+id/supplies_protein"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/supplies_seeds"
+                android:layout_margin="4dp"
+                android:layout_marginStart="4dp"
+                android:text="@string/supplies_protein"
+                android:theme="@style/Checkbox" />
+
+            <CheckBox
+                android:id="@+id/supplies_rations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/supplies_protein"
+                android:layout_margin="4dp"
+                android:layout_marginStart="4dp"
+                android:text="@string/supplies_rations"
+                android:theme="@style/Checkbox" />
+
+            <View
+                android:id="@+id/supplies_view_line"
+                android:layout_width="2dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/supplies_text"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="4dp" />
+
+            <CheckBox
+                android:id="@+id/supplies_water"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/supplies_text"
+                android:layout_margin="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@id/supplies_view_line"
+                android:text="@string/supplies_water"
+                android:theme="@style/Checkbox" />
+
+            <CheckBox
+                android:id="@+id/supplies_energy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/supplies_water"
+                android:layout_margin="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@id/supplies_view_line"
+                android:text="@string/supplies_energy"
+                android:theme="@style/Checkbox" />
+
+            <CheckBox
+                android:id="@+id/supplies_candy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/supplies_energy"
+                android:layout_margin="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@id/supplies_view_line"
+                android:text="@string/supplies_candy"
+                android:theme="@style/Checkbox" />
+
+            <CheckBox
+                android:id="@+id/supplies_junk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/supplies_candy"
+                android:layout_margin="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@id/supplies_view_line"
+                android:text="@string/supplies_junk"
+                android:theme="@style/Checkbox" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:background="#000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/death_title"
+                android:theme="@style/Header" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/death_text"
+                android:theme="@style/Question"
+                tools:ignore="TooManyViews" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:theme="@style/RadioGroup">
+
+                <RadioButton
+                    android:id="@+id/death_heart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/death_heart"
+                    android:theme="@style/RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/death_cut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/death_cut"
+                    android:theme="@style/RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/death_tie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/death_tie"
+                    android:theme="@style/RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/death_brain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/death_brain"
+                    android:theme="@style/RadioButton" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:background="#000000" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:background="@color/colorPrimaryLight"
+            android:onClick="submitAnswers"
+            android:padding="8dp"
+            android:text="@string/submit"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:background="@color/colorPrimaryLight"
+            android:padding="8dp"
+            android:text="@string/reset"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>
